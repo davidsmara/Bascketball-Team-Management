@@ -1,3 +1,3 @@
-C:/Proiecte Informatica/Bascketball Project/cmake-build-debug/CMakeFiles/Bascketball_Project.dir
-C:/Proiecte Informatica/Bascketball Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Proiecte Informatica/Bascketball Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Proiecte Informatica/Bascketball-Team-Management/cmake-build-debug/CMakeFiles/Bascketball_Project.dir
+C:/Proiecte Informatica/Bascketball-Team-Management/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Proiecte Informatica/Bascketball-Team-Management/cmake-build-debug/CMakeFiles/rebuild_cache.dir
