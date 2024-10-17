@@ -141,6 +141,105 @@ void initializare() {
     jucator[2].setPozitie("small forward");
 }
 
+class Echipa{
+    private:
+    int echipaId;
+    int nrJucatori;
+    Jucator jucator[20];
+    char numeEchipa[20];
+    char numeOwner[20];
+    int valoareTotala;
+
+    public:
+    Echipa() {
+        echipaId=0;
+        nrJucatori=0;
+        for(int i=1; i<=20; i++)
+            jucator[i]=0;//operator = in clasa jucator si egalezi cu jucator
+        strcpy(numeEchipa, "");
+        strcpy(numeOwner, "");
+        valoareTotala=0;
+    }
+
+    Echipa(int echipaId, int nrJucatori, int jucator[20], char *numeEchipa, char *numeOwner, int valoareTotala) {
+        this->echipaId = echipaId;
+        this->nrJucatori = nrJucatori;
+        for(int i=1; i<=20; i++)
+            this->jucator[i] = jucator[i];
+        strcpy(this->numeEchipa, numeEchipa);
+        strcpy(this->numeOwner, numeOwner);
+        this->valoareTotala = valoareTotala;
+    }
+
+    Echipa(const Echipa &rhs) {
+        echipaId = rhs.echipaId;
+        strcpy(numeEchipa, rhs.numeEchipa);
+        strcpy(numeOwner, rhs.numeOwner);
+        for(int i=1; i<=20; i++)
+            this->jucator[i] = rhs.jucator[i];
+        this->valoareTotala = rhs.valoareTotala;
+        this->nrJucatori = rhs.nrJucatori;
+    }
+
+        void setEchipaId(int echipaId) {
+            this->echipaId = echipaId;
+        }
+
+        int getEchipaId() {
+            return this->echipaId;
+        }
+
+        void setNrJucatori(int nrJucatori) {
+            this->nrJucatori = nrJucatori;
+        }
+
+        int getNrJucatori() {
+            return this->nrJucatori;
+        }
+
+        void setJucator(int jucator[20]) {
+            for(int i=1; i<=20; i++)
+                this->jucator[i] = jucator[i];
+        }
+
+        int getJucator(int jucator[20]) {
+            for(int i=1; i<=20; i++)
+                return this->jucator[i];
+        }
+
+        void setNumeEchipa(char numeEchipa[20]) {
+            strcpy(this->numeEchipa, numeEchipa);
+        }
+
+        char *getNumeEchipa() {
+            return this->numeEchipa;
+        }
+
+        void setNumeOwner(char *numeOwner) {
+            strcpy(this->numeOwner, numeOwner);
+        }
+
+        char *getNumeOwner() {
+            return this->numeOwner;
+        }
+
+        void setValoareTotala(int valoareTotala) {
+            this->valoareTotala = valoareTotala;
+        }
+
+        int getValoareTotala() {
+            return this->valoareTotala;
+        }
+
+        friend ostream &operator<<(ostream &os, const Echipa &rhs);
+    };
+
+ostream &operator<<(ostream& os, const Echipa& rhs) {
+    os <<"NumeEchipa: " << rhs.numeEchipa<<", NumeOwner: "<<rhs.numeOwner;
+    return os;
+}
+
+
 int main() {
     initializare();
 
